@@ -59,8 +59,8 @@ export default function HomePage() {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }} className="services-grid">
           {/* InterimManagement card */}
           <div className="card">
-            <h2 className="text-brand" style={{ fontSize: '30px', fontWeight: 700, margin: '0 0 1.25rem', textAlign: 'center' }}>
-              InterimManagement.
+            <h2 style={{ fontSize: '30px', fontWeight: 700, margin: '0 0 1.25rem', textAlign: 'center' }}>
+              <span className="text-brand">Interim</span><span className="text-blue">Management.</span>
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {[
