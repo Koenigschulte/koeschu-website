@@ -75,7 +75,7 @@ export default function EinfachKIPage() {
     <>
       {/* Hero */}
       <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 1.5rem 3rem' }}>
-        <h1 style={{ fontSize: '48px', fontWeight: 700, margin: '0 0 2rem', textAlign: 'center' }}>
+        <h1 style={{ fontSize: '65px', fontWeight: 700, margin: '0 0 2rem', textAlign: 'center' }}>
           <span className="text-brand">Einfach</span><span className="text-blue">KI.</span>{' '}<span className="text-brand">Einfach</span><span className="text-blue">Machen.</span>
         </h1>
 
@@ -115,14 +115,9 @@ export default function EinfachKIPage() {
                   gap: '1.25rem',
                 }}
               >
-                <p style={{ fontSize: '22px', fontWeight: 400, margin: 0, fontFamily: 'var(--font-syne)' }}>
+                <p style={{ fontSize: '30px', fontWeight: 400, margin: 0, fontFamily: 'var(--font-syne)' }}>
                   <span className="text-brand">{card.titleBrand}</span>
-                  {card.titleBlue && (
-                    <>
-                      <span className="text-blue">&amp;</span>
-                      <span className="text-brand">{card.titleBlue.slice(1)}</span>
-                    </>
-                  )}
+                  {card.titleBlue && <span className="text-blue">{card.titleBlue}</span>}
                 </p>
                 <div style={{ position: 'relative', aspectRatio: '16/9', borderRadius: '8px', overflow: 'hidden' }}>
                   <Image src={card.image} alt={card.alt} fill style={{ objectFit: 'cover' }} />
@@ -144,7 +139,7 @@ export default function EinfachKIPage() {
       <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem 5rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }} className="cta-grid">
           <div>
-            <h2 className="text-brand" style={{ fontSize: '32px', fontWeight: 700, margin: '0 0 1.5rem' }}>
+            <h2 className="text-brand" style={{ fontSize: '42px', fontWeight: 700, margin: '0 0 1.5rem' }}>
               Nimm Kontakt auf!
             </h2>
             <Link href="/contact" className="btn-filled">Kontakt</Link>

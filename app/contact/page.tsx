@@ -47,11 +47,11 @@ export default function ContactPage() {
 
   return (
     <section style={{ maxWidth: '640px', margin: '0 auto', padding: '4rem 1.5rem 6rem' }}>
-      <h1 style={{ fontSize: '48px', fontWeight: 700, margin: '0 0 1rem', color: '#C76B10' }}>
+      <h1 style={{ fontSize: '65px', fontWeight: 700, margin: '0 0 1rem', color: '#C76B10' }}>
         Kontakt
       </h1>
 
-      <h2 style={{ fontSize: '32px', fontWeight: 700, margin: '0 0 2.5rem', color: '#C76B10' }}>
+      <h2 style={{ fontSize: '42px', fontWeight: 700, margin: '0 0 2.5rem', color: '#C76B10' }}>
         Noch offene Fragen? Jetzt kontaktieren!
       </h2>
 

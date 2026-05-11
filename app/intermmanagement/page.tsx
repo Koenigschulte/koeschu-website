@@ -6,7 +6,7 @@ export default function IntermManagementPage() {
     <>
       {/* Hero */}
       <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 1.5rem 3rem', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '48px', fontWeight: 700, margin: 0 }}>
+        <h1 style={{ fontSize: '65px', fontWeight: 700, margin: 0 }}>
           <span className="text-brand">Interim</span><span className="text-blue">Management.</span>
         </h1>
       </section>
@@ -20,7 +20,7 @@ export default function IntermManagementPage() {
             <Image src="/images/person-pencil.webp" alt="Projektleitung" fill style={{ objectFit: 'cover' }} />
           </div>
           <div>
-            <h2 style={{ fontSize: '32px', fontWeight: 700, margin: '0 0 1.25rem', color: '#C76B10' }}>
+            <h2 style={{ fontSize: '42px', fontWeight: 700, margin: '0 0 1.25rem', color: '#C76B10' }}>
               Projektleitung – Führung mit Überblick und Verantwortung
             </h2>
             <p style={{ color: '#ffffff', lineHeight: '1.75', fontSize: '18px', margin: 0, fontFamily: 'var(--font-syne)' }}>
@@ -32,7 +32,7 @@ export default function IntermManagementPage() {
         {/* Sektion 2: Text links, Bild rechts */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'start' }} className="section-grid">
           <div>
-            <h2 style={{ fontSize: '32px', fontWeight: 700, margin: '0 0 1.25rem', color: '#C76B10' }}>
+            <h2 style={{ fontSize: '42px', fontWeight: 700, margin: '0 0 1.25rem', color: '#C76B10' }}>
               Business Analyse – von Daten zu Entscheidungen
             </h2>
             <p style={{ color: '#ffffff', lineHeight: '1.75', fontSize: '18px', margin: 0, fontFamily: 'var(--font-syne)' }}>
@@ -50,7 +50,7 @@ export default function IntermManagementPage() {
             <Image src="/images/arrow.webp" alt="Prozessmanagement" fill style={{ objectFit: 'cover' }} />
           </div>
           <div>
-            <h2 style={{ fontSize: '32px', fontWeight: 700, margin: '0 0 1.25rem', color: '#C76B10' }}>
+            <h2 style={{ fontSize: '42px', fontWeight: 700, margin: '0 0 1.25rem', color: '#C76B10' }}>
               Prozessmanagement – Effizienz beginnt vor der Digitalisierung
             </h2>
             <p style={{ color: '#ffffff', lineHeight: '1.75', fontSize: '18px', margin: 0, fontFamily: 'var(--font-syne)' }}>
@@ -64,7 +64,7 @@ export default function IntermManagementPage() {
       <section style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem 5rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }} className="cta-grid">
           <div>
-            <h2 className="text-brand" style={{ fontSize: '32px', fontWeight: 700, margin: '0 0 1.5rem' }}>
+            <h2 className="text-brand" style={{ fontSize: '42px', fontWeight: 700, margin: '0 0 1.5rem' }}>
               Nimm Kontakt auf!
             </h2>
             <Link href="/contact" className="btn-filled">Kontakt</Link>
