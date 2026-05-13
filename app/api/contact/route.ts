@@ -1,8 +1,41 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
+// In-memory rate limit: max 3 submissions per IP per 10 minutes
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now()
+  const entry = rateLimitMap.get(ip)
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + 10 * 60 * 1000 })
+    return false
+  }
+  if (entry.count >= 3) return true
+  entry.count++
+  return false
+}
+
 export async function POST(req: NextRequest) {
-  const { name, email, message } = await req.json()
+  const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
+
+  const body = await req.json()
+  const { name, email, message, _hp, _t } = body
+
+  // Honeypot: Bots füllen dieses Feld aus
+  if (_hp) {
+    return NextResponse.json({ ok: true })
+  }
+
+  // Timing: Formular in unter 2 Sekunden ausgefüllt → Bot
+  if (!_t || Date.now() - Number(_t) < 2000) {
+    return NextResponse.json({ ok: true })
+  }
+
+  // Rate limiting
+  if (isRateLimited(ip)) {
+    return NextResponse.json({ error: 'Zu viele Anfragen. Bitte warte kurz.' }, { status: 429 })
+  }
 
   if (!name || !email || !message) {
     return NextResponse.json({ error: 'Alle Felder sind erforderlich.' }, { status: 400 })
